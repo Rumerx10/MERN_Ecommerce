@@ -10,5 +10,5 @@ const DataSchema = mongoose.Schema(
     versionKey: false,
   }
 );
-
-export default mongoose.model("categories", DataSchema);
+const CategoryModel = mongoose.model("categories", DataSchema);
+export default CategoryModel;

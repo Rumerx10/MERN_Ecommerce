@@ -11,5 +11,5 @@ const DataSchema = mongoose.Schema(
     versionKey: true,
   }
 );
-
-export default mongoose.model("users", DataSchema);
+const UserModel = mongoose.model("users", DataSchema);
+export default UserModel;

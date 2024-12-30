@@ -10,5 +10,5 @@ const DataSchema = mongoose.Schema(
     versionKey: false,
   }
 );
-
-export default mongoose.model("wishes", DataSchema);
+const WishListModel = mongoose.model("wishes", DataSchema);
+export default WishListModel;

@@ -16,5 +16,6 @@ const DataSchema = mongoose.Schema(
     versionKey: false,
   }
 );
+const PaymentSettingModel = mongoose.model("paymentsettings", DataSchema);
 
-export default mongoose.model("paymentsettings", DataSchema);
+export default PaymentSettingModel;

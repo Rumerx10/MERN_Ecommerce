@@ -11,5 +11,5 @@ const DataSchema = mongoose.Schema(
     versionKey: false,
   }
 );
-
-export default mongoose.model("features", DataSchema);
+const FeatureModel = mongoose.model("features", DataSchema);
+export default FeatureModel;

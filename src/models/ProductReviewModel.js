@@ -12,5 +12,5 @@ const DataSchema = mongoose.Schema(
     versionKey: false,
   }
 );
-
-export default mongoose.model("reviews", DataSchema);
+const ProductReviewModel = mongoose.model("reviews", DataSchema);
+export default ProductReviewModel;

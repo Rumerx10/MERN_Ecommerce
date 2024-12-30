@@ -12,16 +12,16 @@ const DataSchema = mongoose.Schema(
     img8: { type: String },
 
     des: { type: String, required: true },
-    color: { type: Sring, required: true },
-    size: { type: Sring, required: true },
+    color: { type: String, required: true },
+    size: { type: String, required: true },
 
     productID: { type: mongoose.Schema.Types.ObjectId, required: true },
   },
 
   {
     timestamps: true,
-    versionKey: true,
+    versionKey: false,
   }
 );
-
-export default mongoose.model("productdetails", DataSchema);
+const ProductDetailModel = mongoose.model("productdetails", DataSchema);
+export default ProductDetailModel;

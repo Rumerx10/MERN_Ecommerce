@@ -11,4 +11,6 @@ const DataSchema = mongoose.Schema(
   }
 );
 
-export default mongoose.model("brands", DataSchema);
+const BrandModel = mongoose.model("brands", DataSchema);
+
+export default BrandModel;

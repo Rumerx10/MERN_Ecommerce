@@ -15,5 +15,6 @@ const DataSchema = mongoose.Schema(
     versionKey: false,
   }
 );
+const InvoiceProductModel = mongoose.model("invoiceproducts", DataSchema);
 
-export default mongoose.model("invoiceproducts", DataSchema);
+export default InvoiceProductModel;
