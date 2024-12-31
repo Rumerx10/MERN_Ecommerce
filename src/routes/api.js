@@ -19,12 +19,16 @@ const router = express.Router();
 router.get("/ProductBrandList", ProductBrandList);
 router.get("/ProductCategoryList", ProductCategoryList);
 router.get("/ProductSliderList", ProductSliderList);
+
+
 router.get("/ProductListByBrand/:brandID", ProductListByBrand);
 router.get("/ProductListByCategory/:categoryID", ProductListByCategory);
-router.get("/ProductListBySimilar/:keyowrd", ProductListBySimilar);
-router.get("/ProductListByKeyword/:keyowrd", ProductListByKeyword);
 router.get("/ProductListByRemark/:remark", ProductListByRemark);
+
 router.get("/ProductDetails/:productID", ProductDetails);
+router.get("/ProductListBySimilar/:categoryName", ProductListBySimilar);
+
+router.get("/ProductListByKeyword/:keyword", ProductListByKeyword);
 router.get("/ProductReviewList/:productID", ProductReviewList);
 
 export default router;
