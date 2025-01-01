@@ -12,6 +12,7 @@ import {
   ProductReviewList,
   ProductSliderList,
 } from "../controllers/ProductController.js";
+import { UserOTP } from "../controllers/UserController.js";
 
 const router = express.Router();
 
@@ -19,7 +20,6 @@ const router = express.Router();
 router.get("/ProductBrandList", ProductBrandList);
 router.get("/ProductCategoryList", ProductCategoryList);
 router.get("/ProductSliderList", ProductSliderList);
-
 
 router.get("/ProductListByBrand/:brandID", ProductListByBrand);
 router.get("/ProductListByCategory/:categoryID", ProductListByCategory);
@@ -30,5 +30,8 @@ router.get("/ProductListBySimilar/:categoryName", ProductListBySimilar);
 
 router.get("/ProductListByKeyword/:keyword", ProductListByKeyword);
 router.get("/ProductReviewList/:productID", ProductReviewList);
+
+// user
+router.get("/UserOTP/:email", UserOTP);
 
 export default router;
