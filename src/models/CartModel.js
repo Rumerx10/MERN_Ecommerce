@@ -2,17 +2,13 @@ import mongoose from "mongoose";
 
 const DataSchema = mongoose.Schema(
   {
-    userID: { type: mongoose.Schema.Types.ObjectId, required: true },
-    productID: { type: mongoose.Schema.Types.ObjectId, required: true },
-    color: { type: String, required: true },
-    price: { type: String, required: true },
-    qty: { type: String, required: true },
-    size: { type: String, required: true },
+    userID: { type: String },
+    productID: { type: String },
+    color: { type: String },
+    qty: { type: String },
+    size: { type: String },
   },
-  {
-    timestamps: true,
-    versionKey: false,
-  }
+  { timestamps: true, versionKey: false }
 );
-const CartModel = mongoose.model("carts", DataSchema);
-export default CartModel;
+
+export const CartModel = mongoose.model("carts", DataSchema);

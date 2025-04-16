@@ -2,14 +2,11 @@ import mongoose from "mongoose";
 
 const DataSchema = mongoose.Schema(
   {
-    email: { type: String, unique: true, required: true, lowercase: true },
-    OTP: { type: String, required: true },
+    email: { type: String, required: true, lowercase: true },
+    otp: { type: String, required: true },
   },
-
-  {
-    timestamps: true,
-    versionKey: false,
-  }
+  { timestamps: true, versionKey: false }
 );
-const UserModel = mongoose.model("users", DataSchema);
-export default UserModel;
+
+export const UserModel = mongoose.model("users", DataSchema);
+ 

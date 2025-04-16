@@ -2,8 +2,8 @@ import mongoose from "mongoose";
 
 const DataSchema = mongoose.Schema(
   {
-    store_id: { type: String, required: true },
-    store_passwd: { type: String, required: true },
+    storeID: { type: String, required: true },
+    store_passswd: { type: String, required: true },
     currency: { type: String, required: true },
     success_url: { type: String, required: true },
     fail_url: { type: String, required: true },
@@ -11,11 +11,10 @@ const DataSchema = mongoose.Schema(
     ipn_url: { type: String, required: true },
     init_url: { type: String, required: true },
   },
-  {
-    timestamps: true,
-    versionKey: false,
-  }
+  { timestamps: true, versionKey: false }
 );
-const PaymentSettingModel = mongoose.model("paymentsettings", DataSchema);
 
-export default PaymentSettingModel;
+export const PaymentSettingsModel = mongoose.model(
+  "paymentsettings",
+  DataSchema
+);

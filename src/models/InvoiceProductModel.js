@@ -10,11 +10,10 @@ const DataSchema = mongoose.Schema(
     color: { type: String, required: true },
     size: { type: String, required: true },
   },
-  {
-    timestamps: true,
-    versionKey: false,
-  }
+  { timestamps: true, versionKey: false }
 );
-const InvoiceProductModel = mongoose.model("invoiceproducts", DataSchema);
 
-export default InvoiceProductModel;
+export const InvoiceProductModel = mongoose.model(
+  "invoiceproducts",
+  DataSchema
+);

@@ -1,17 +1,16 @@
 import jwt from "jsonwebtoken";
-
-export const EncodeToken = () => {
-  let KEY = "123-ABC-XYZ";
-  let EXPIRE = { expiresIn: "24h" };
-  let PAYLOAD = { email: "rume@gmail.com", userID: "123" };
-  return jwt.sign(PAYLOAD, KEY, EXPIRE);
+export const EncodeToken = (email, userID) => {
+  let KEY = "123-ABC-$#@";
+  let EXP = { expiresIn: "1h" };
+  let PAYLOAD = { email: email, userID: userID };
+  return jwt.sign(PAYLOAD, KEY, EXP);
 };
 
 export const DecodeToken = (token) => {
   try {
-    let KEY = "123-ABC-XYZ";
+    let KEY = "123-ABC-$#@";
     return jwt.verify(token, KEY);
   } catch (error) {
-    return null;
+    console.log("Invalid Token!");
   }
 };

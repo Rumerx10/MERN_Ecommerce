@@ -13,10 +13,7 @@ const DataSchema = mongoose.Schema(
     total: { type: String, required: true },
     vat: { type: String, required: true },
   },
-  {
-    timestamps: true,
-    versionKey: false,
-  }
+  { timestamps: true, versionKey: false }
 );
-const InvoiceModel = mongoose.model("invoices", DataSchema);
-export default InvoiceModel;
+
+export const InvoiceModel = mongoose.model("invoices", DataSchema);
